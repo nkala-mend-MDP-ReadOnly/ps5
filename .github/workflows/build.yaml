@@ -1,0 +1,17 @@
+name: mybiuld
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  
+
+    
+jobs:
+  dummy_test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'Make renovate automerge excuted'
+      -  run: exit 1
+      - name: Print message if we don't fail
+        run: echo Should not get here
